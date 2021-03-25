@@ -1,0 +1,27 @@
+@import "../varibles";
+
+/*form-control*/
+.form-control {
+  height: 45px;
+  border: 1px solid #eeeeee;
+  background-color: transparent;
+  border-radius: 0;
+  transition: $transition;
+  color: $black-color;
+  line-height: initial;
+  padding-left: 13px;
+  font: {
+    size: 14px;
+  }
+  &:hover,
+  &:focus {
+    box-shadow: unset;
+  }
+  &::placeholder {
+    color: #999999;
+  }
+  &:focus {
+    box-shadow: unset;
+    border-color: $main-color;
+  }
+}

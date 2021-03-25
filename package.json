@@ -1,0 +1,36 @@
+{
+    "name": "ai-startups",
+    "version": "2.6.0",
+    "description": "Opstar - React Next AI Startups Template",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build && next export",
+        "start": "next start"
+    },
+    "author": "EnvyTheme.com",
+    "license": "ISC",
+    "dependencies": {
+        "@babel/runtime-corejs2": "^7.12.13",
+        "axios": "^0.19.2",
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "next": "^10.0.6",
+        "next-redux-wrapper": "^3.0.0",
+        "next-routes": "^1.4.2",
+        "next-seo": "^2.2.1",
+        "react": "^16.13.1",
+        "react-accessible-accordion": "^3.3.4",
+        "react-dom": "^16.13.1",
+        "react-modal-video": "^1.2.3",
+        "react-owl-carousel3": "^2.2.5",
+        "react-redux": "^7.2.0",
+        "react-stripe-checkout": "^2.6.3",
+        "react-toastify": "^5.5.0",
+        "redux": "^4.0.5",
+        "redux-devtools-extension": "^2.13.8",
+        "sass": "^1.32.7",
+        "stripe": "^7.15.0",
+        "wowjs": "^1.1.3"
+    }
+}

@@ -1,0 +1,146 @@
+@import "../varibles";
+
+/*================================================
+Main Banner Area CSS
+=================================================*/
+.main-banner {
+  position: relative;
+  z-index: 1;
+  height: 550px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("/images/banner-bg.jpeg");
+  padding: {
+    left: 50px;
+    right: 50px;
+  }
+}
+
+.main-banner-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.main-banner-content {
+  width: 60%;
+  margin: 0px auto;
+  span {
+    display: block;
+    color: $white-color;
+    margin-bottom: -5px;
+    font: {
+      family: $optional-font-family;
+      size: 18px;
+    }
+  }
+
+  h2 {
+    color: $white-color;
+    margin: {
+      bottom: 20px;
+    }
+
+    line-height: 40px;
+  }
+  p {
+    color: $white-color;
+    font-size: 14.5px;
+    max-width: 620px;
+    margin: {
+      top: 10px;
+      bottom: 0;
+    }
+  }
+  .btn-primary {
+    color: $white-color !important;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $main-color;
+    }
+
+    &::after {
+      background-color: $main-color !important;
+    }
+  }
+}
+
+.main-banner-image {
+  text-align: right;
+  position: relative;
+  top: 35px;
+
+  img {
+    max-width: 90%;
+  }
+}
+
+.banner-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.shape1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -2;
+}
+
+.shape2 {
+  position: absolute;
+  left: 23%;
+  top: 0;
+  z-index: -1;
+  animation: moveleftbounce 15s linear infinite;
+}
+
+@keyframes moveleftbounce {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes movebounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: $screen-xs) {
+  .main-banner {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("/images/banner-bg.jpeg");
+
+    padding: {
+      right: 50px;
+    }
+  }
+  .main-banner-content {
+    padding-top: 40px;
+  }
+}

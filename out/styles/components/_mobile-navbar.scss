@@ -1,0 +1,68 @@
+@import "../varibles";
+
+// Mobile Navbar
+@media only screen and (max-width: 767px) {
+  .navbar-area {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    padding: {
+      top: 15px;
+      bottom: 15px;
+    }
+    &.is-sticky {
+      border-bottom: none;
+      box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+
+      .evolta-nav {
+        padding: 0;
+      }
+    }
+  }
+  .evolta-nav {
+    padding: 0;
+
+    .navbar {
+      .navbar-nav {
+        margin-top: 10px;
+        margin-left: 0;
+        background: $gradient-color;
+        padding: {
+          top: 5px;
+          left: 15px;
+          right: 15px;
+          bottom: 5px;
+        }
+        .nav-item {
+          padding-top: 8px;
+          padding-bottom: 8px;
+
+          a {
+            margin-left: 0;
+            margin-right: 0;
+          }
+          .dropdown-menu {
+            li {
+              .dropdown-menu {
+                left: -4px;
+                top: 0;
+                margin-top: 60px;
+              }
+            }
+          }
+        }
+      }
+      .others-options {
+        display: none;
+      }
+    }
+  }
+  .navbar-light {
+    .navbar-toggler {
+      border-color: $white-color;
+      border-radius: 0;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  }
+}

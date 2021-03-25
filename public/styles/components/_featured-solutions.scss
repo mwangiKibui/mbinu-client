@@ -1,0 +1,43 @@
+@import "../varibles";
+
+/*================================================
+Featured Solutions Area CSS
+=================================================*/
+.featured-solutions-area {
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  h2 {
+    color: $heading-color;
+  }
+}
+
+.single-featured-solutions {
+  margin-bottom: 30px;
+  text-align: center;
+
+  img {
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  h3 {
+    margin-bottom: 0;
+    color: $sub-heading-color;
+    font: {
+      size: 23px;
+      weight: 700;
+    }
+  }
+  p {
+    margin: {
+      top: 13px;
+      bottom: 0;
+    }
+  }
+  .read-more-btn {
+    margin-top: 15px;
+  }
+}
