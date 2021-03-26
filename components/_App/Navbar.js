@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'next/router';
 import Link from '../../utils/ActiveLink';
 import classNames from "classnames";
+import { Menu } from "@material-ui/icons";
 
 class Navbar extends Component {
     _isMounted = false;
@@ -58,7 +59,8 @@ class Navbar extends Component {
                                 aria-expanded="false" 
                                 aria-label="Toggle navigation"
                             >
-                                <span className="navbar-toggler-icon"></span>
+                                {/* <span className="navbar-toggler-icon"></span> */}
+                                <Menu />
                             </button>
 
                             <div className={classOne} id="navbarSupportedContent">

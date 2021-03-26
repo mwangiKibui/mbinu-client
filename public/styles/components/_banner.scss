@@ -73,21 +73,17 @@ Main Banner Area CSS
   }
 }
 
-@media screen and (max-width: $screen-xs) {
-  .main-banner {
-    position: relative;
-    z-index: 1;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-image: url("/images/banner-bg.jpeg");
-
-    padding: {
-      right: 50px;
-    }
-  }
+@media only screen and (max-width: $screen-xs) {
   .main-banner-content {
-    padding-top: 40px;
+    width: 100%;
+  }
+
+  .main-banner {
+    height: 400px !important;
+    padding: 0px !important;
+  }
+
+  .main-banner-content {
+    text-align: left !important;
   }
 }

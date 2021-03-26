@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Loader from '../shared/Loader';
 import Link from 'next/link';
 
 class Footer extends Component {
@@ -34,22 +33,22 @@ class Footer extends Component {
 
                                     <ul className="quick-links-list">
                                         <li>
-                                            <Link href="/front-end">
+                                            <Link href="/categories/front-end">
                                             <a>Front-end</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/back-end">
+                                            <Link href="/categories/back-end">
                                             <a>Back-end</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/databases">
+                                            <Link href="/categories/databases">
                                             <a>Databases</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/apis">
+                                            <Link href="/categories/apis">
                                             <a>Public APIs</a>
                                             </Link>
                                         </li>
@@ -102,8 +101,6 @@ class Footer extends Component {
                         <div className="line"></div>
                     </div>
                 </footer>
-                
-                <Loader />
             </React.Fragment>
         );
     }

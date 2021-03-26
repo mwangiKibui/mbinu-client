@@ -5,16 +5,19 @@ function BlogCard({data}){
     return (
         <div className="blog-card-wrapper">
 
-            <div className="blog-card-img">
+            
+          
+            <div className="d-none d-sm-block d-md-block d-lg-block blog-card-img">
                 <img
                 src={data.image}
                 alt={data.title}
                 />
             </div>
+            
 
             <div className="blog-card-info">
 
-                <Link href={`/${data.category}/${data.title}`}>
+                <Link href={`/blog-details`}>
                     <a>
                         {data.title}
                     </a>

@@ -5,17 +5,25 @@ import '../public/styles/flaticon.css';
 import '../public/styles/fontawesome.min.css';
 import 'react-accessible-accordion/dist/fancy-example.css';
 import 'react-toastify/dist/ReactToastify.css';
+import 'nprogress/nprogress.css';
 import '../public/styles/style.scss';
 import '../public/styles/responsive.scss';
 
 import App from 'next/app';
 import Head from 'next/head';
+import Router from "next/router";
 import GoTop from '../components/shared/GoTop';
+import NProgress from 'nprogress';
 
 
 class MyApp extends App {
     render () {
-        const { Component, pageProps} = this.props
+        const { Component, pageProps} = this.props;
+
+        //NProgress conf.
+        NProgress.configure({
+            showSpinner:false
+        });
 
         return (
             <React.Fragment>
