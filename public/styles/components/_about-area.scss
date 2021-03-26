@@ -32,6 +32,16 @@ About Area CSS
       bottom: 0;
       top: 10px;
     }
+    a {
+      color: $main-color;
+    }
+  }
+  ul {
+    li {
+      a {
+        color: $main-color;
+      }
+    }
   }
 }
 .about-inner-area {

@@ -1,30 +1,18 @@
-import React, { Component } from 'react';
-import MainContent from '../components/about/MainContent';
-import Features from '../components/home/Features';
-import Funfacts from '../components/home/Funfacts';
-import Team from '../components/about/Team';
-import Feedback from '../components/home/Feedback';
-import Subscribe from '../components/home/Subscribe';
+
 import Layout from "../components/shared/Layout";
 import Meta from "../components/shared/Meta";
+import MainContent from "../components/about/MainContent";
 
-class About extends Component {
-    render() {
-        return (
-            <Layout>
-                <Meta 
-                    title="About us"
-                    description="Get to know us more"
-                />
-                <MainContent />
-                <Features />
-                <Funfacts />
-                <Team />
-                <Feedback />
-                <Subscribe />
-            </Layout>
-        );
-    }
-}
+function About(){
+    return (
+        <Layout>
+            <Meta
+            title="About"
+            description="Get to know more about Mbinu"
+            />
+            <MainContent />
+        </Layout>
+    )
+};
 
 export default About;

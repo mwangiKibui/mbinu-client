@@ -6,11 +6,11 @@ Main Banner Area CSS
 .main-banner {
   position: relative;
   z-index: 1;
-  height: 550px;
+  height: 400px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url("/images/banner-bg.jpeg");
+  background-image: url("/images/banner-bg.jpg");
   padding: {
     left: 50px;
     right: 50px;
@@ -18,7 +18,6 @@ Main Banner Area CSS
 }
 
 .main-banner-overlay {
-  position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -27,102 +26,50 @@ Main Banner Area CSS
 }
 
 .main-banner-content {
-  width: 60%;
+  position: absolute;
+  width: 50%;
   margin: 0px auto;
-  span {
-    display: block;
-    color: $white-color;
-    margin-bottom: -5px;
-    font: {
-      family: $optional-font-family;
-      size: 18px;
-    }
-  }
 
   h2 {
     color: $white-color;
     margin: {
-      bottom: 20px;
+      bottom: 10px;
     }
 
     line-height: 40px;
   }
-  p {
+
+  h5 {
     color: $white-color;
-    font-size: 14.5px;
-    max-width: 620px;
+    font-family: $optional-font-family;
     margin: {
-      top: 10px;
-      bottom: 0;
+      bottom: 10px;
     }
   }
-  .btn-primary {
-    color: $white-color !important;
-    cursor: pointer;
 
-    &:hover {
-      background-color: $main-color;
+  .content-author {
+    display: flex;
+    justify-content: left;
+
+    .content-author-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
     }
 
-    &::after {
-      background-color: $main-color !important;
+    .content-author-info {
+      padding: 0px 10px;
+      display: flex;
+      align-items: center;
+
+      a {
+        color: $white-color;
+        &:hover {
+          color: $white-color;
+          text-decoration: none;
+        }
+      }
     }
-  }
-}
-
-.main-banner-image {
-  text-align: right;
-  position: relative;
-  top: 35px;
-
-  img {
-    max-width: 90%;
-  }
-}
-
-.banner-shape {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.shape1 {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -2;
-}
-
-.shape2 {
-  position: absolute;
-  left: 23%;
-  top: 0;
-  z-index: -1;
-  animation: moveleftbounce 15s linear infinite;
-}
-
-@keyframes moveleftbounce {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(20px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-@keyframes movebounce {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0px);
   }
 }
 

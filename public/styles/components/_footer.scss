@@ -7,7 +7,7 @@ Footer Area CSS
   position: relative;
   z-index: 1;
   padding-top: 100px;
-  background: $gradient-color;
+  background: $paragraph-color;
 }
 .single-footer-widget {
   margin-bottom: 30px;
@@ -21,6 +21,10 @@ Footer Area CSS
         top: 18px;
         bottom: 0;
       }
+    }
+
+    a {
+      color: $white-color;
     }
   }
   p {
@@ -153,7 +157,7 @@ Footer Area CSS
   }
 }
 .copyright-area {
-  background: $gradient-color;
+  background: $paragraph-color;
   margin-top: 70px;
   padding: {
     top: 20px;

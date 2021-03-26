@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'next/router';
 import Link from '../../utils/ActiveLink';
+import classNames from "classnames";
 
 class Navbar extends Component {
     _isMounted = false;
@@ -24,35 +25,18 @@ class Navbar extends Component {
         });
     }
 
-    // componentDidMount() {
-    //     this._isMounted = true;
-    //     let elementId = document.getElementById("navbar");
-    //     document.addEventListener("scroll", () => {
-    //         if (window.scrollY > 170) {
-    //             elementId.classList.add("is-sticky");
-    //         } else {
-    //             elementId.classList.remove("is-sticky");
-    //         }
-    //     });
-    //     window.scrollTo(0, 0);
-    // }
-
-    // componentWillUnmount() {
-    //     this._isMounted = false;
-    // }
-
     render() {
-        let { pathname } = this.props.router;
+        let { pathname,asPath } = this.props.router;
         const { collapsed } = this.state;
         const classOne = collapsed ? 'collapse navbar-collapse' : 'collapse navbar-collapse show';
         const classTwo = collapsed ? 'navbar-toggler navbar-toggler-right collapsed' : 'navbar-toggler navbar-toggler-right';
 
         let layOutCls = 'evolta-nav navbar-style-two';
         let layOutContainer = 'container';
-        if (pathname == '/'){
-            layOutCls = 'evolta-nav';
-            layOutContainer = 'container-fluid';
-        }
+        // if (pathname == '/'){
+        //     layOutCls = 'evolta-nav';
+        //     layOutContainer = 'container-fluid';
+        // }
 
         return (
             <div id="navbar" className="navbar-area is-sticky">
@@ -80,45 +64,53 @@ class Navbar extends Component {
                             <div className={classOne} id="navbarSupportedContent">
                                 <ul className="navbar-nav">
                                     <li className="nav-item">
-                                        <Link activeClassName="active" href="/front-end">
-                                            <a className="nav-link">Front-end</a>
+                                        <Link href="/categories/front-end">
+                                            <a className={
+                                                classNames('nav-link',{
+                                                    'active' : asPath === "/categories/front-end"
+                                                })
+                                            }>Front-end</a>
                                         </Link>
                                     </li>
                                     
 
                                     <li className="nav-item">
-                                        <Link activeClassName="active" href="/back-end">
-                                            <a className="nav-link">Back-end</a>
+                                        <Link activeClassName="active" href="/categories/back-end">
+                                            <a className={
+                                                classNames('nav-link',{
+                                                    'active' : asPath === "/categories/back-end"
+                                                })
+                                            }>Back-end</a>
                                         </Link>
                                     </li>
 
                                     <li className="nav-item">
-                                        <Link activeClassName="active" href="/databases">
-                                            <a className="nav-link">Databases</a>
+                                        <Link activeClassName="active" href="/categories/databases">
+                                            <a className={
+                                                classNames('nav-link',{
+                                                    'active': asPath === "/categories/databases"
+                                                })
+                                            }>Databases</a>
                                         </Link>
                                     </li>
 
                                     <li className="nav-item">
-                                        <Link activeClassName="active" href="/apis">
-                                            <a className="nav-link">A.P.I's</a>
-                                        </Link>
-                                    </li>
-
-                                    <li className="nav-item">
-                                        <Link activeClassName="active" href="/team">
-                                            <a className="nav-link">Team</a>
+                                        <Link activeClassName="active" href="/categories/apis">
+                                            <a className={
+                                                classNames('nav-link',{
+                                                    'active': asPath === "/categories/apis"
+                                                })
+                                            }>A.P.I's</a>
                                         </Link>
                                     </li>
 
                                     <li className="nav-item">
                                         <Link activeClassName="active" href="/about">
-                                            <a className="nav-link">About us</a>
-                                        </Link>
-                                    </li>
-
-                                    <li className="nav-item">
-                                        <Link activeClassName="active" href="/contact">
-                                            <a className="nav-link">Contact</a>
+                                            <a className={
+                                                classNames('nav-link',{
+                                                    'active': pathname === "/about"
+                                                })
+                                            }>About</a>
                                         </Link>
                                     </li>
                                 </ul>

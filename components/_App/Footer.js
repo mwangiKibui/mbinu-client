@@ -22,10 +22,8 @@ class Footer extends Component {
                                     </div>
 
                                     <ul className="social">
-                                        <li><a href="#" target="_blank"><i className="flaticon-facebook-letter-logo"></i></a></li>
-                                        <li><a href="#" target="_blank"><i className="flaticon-twitter-black-shape"></i></a></li>
-                                        <li><a href="#" target="_blank"><i className="flaticon-instagram-logo"></i></a></li>
-                                        <li><a href="#" target="_blank"><i className="flaticon-youtube"></i></a></li>
+                                        <li><a href="#" target="_blank"><i className="fab fa-twitter"></i></a></li>
+                                        <li><a href="#" target="_blank"><i className="fab fa-github"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
