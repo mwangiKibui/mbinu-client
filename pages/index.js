@@ -6,11 +6,11 @@ import Banner from "../components/shared/Banner";
 import BlogCard from "../components/shared/BlogCard";
 import data from "../store/data/blogs";
 
-const Blog = ({blogs}) => {
+const Blog = () => {
     return (
         <Layout>
             <Meta />
-            <Banner blog={blogs[0]}/>
+            <Banner blog={data[0]}/>
             <section className="blog-area ptb-110">
                 <div className="container">
                     <div className="row">
@@ -29,16 +29,4 @@ const Blog = ({blogs}) => {
         </Layout>
     );
 };
-
-export async function getServerSideProps(){
-
-    // return our static blog data.
-    return {
-        props:{
-            blogs:data
-        }
-    }
-    
-}
-
 export default Blog;

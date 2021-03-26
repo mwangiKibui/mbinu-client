@@ -50,3 +50,9 @@
     padding: 5px;
   }
 }
+
+@media only screen and (max-width: $screen-xs) {
+  .blog-card-wrapper {
+    width: 100%;
+  }
+}

@@ -9,43 +9,39 @@ function CategoryPage({blogs,category}){
 
     const router = useRouter();
 
+    if(router.isFallback){
+        return (
+                <p>Loading...</p>
+        )
+    }
+
     return (
         <Layout>
-            {
-                router.isFallback ? (
-                    <p>
-                        Loading...
-                    </p>
-                ) : (
-                    <>
-                    <Meta
-                    title={`${category[0].toUpperCase()+category.slice(1)}`}
-                    />
-                    <Banner
-                    blog={blogs[0]}
-                    />
-                    <section className="category-area ptb-110">
-                    <div className="container">
-                    <div className="row">
-                        {
-                            blogs.map((blog,i) => (
-                                <div className="col-12 col-sm-12 col-lg-12" key={i}>
-                                    <BlogCard data={blog} />
-                                </div>
-                            ))
-                        }
-                    </div>
-                    </div>
-                    </section>
-                    <style jsx>{`
-                    .category-area{
-                        width:100%;
-                        min-height:45vh;
-                    }
-                    `}</style>
-                    </>
-                )
-            }            
+            <Meta
+            title={`${category[0].toUpperCase()+category.slice(1)}`}
+            />
+            <Banner
+            blog={blogs[0]}
+            />
+            <section className="category-area ptb-110">
+            <div className="container">
+            <div className="row">
+                {
+                    blogs.map((blog,i) => (
+                        <div className="col-12 col-sm-12 col-lg-12" key={i}>
+                            <BlogCard data={blog} />
+                        </div>
+                    ))
+                }
+            </div>
+            </div>
+            </section>
+            <style jsx>{`
+            .category-area{
+                width:100%;
+                min-height:45vh;
+            }
+            `}</style>       
         </Layout>
     )
 };
@@ -71,17 +67,11 @@ export async function getStaticPaths(){
 
     let categories = ["front-end","back-end","databases","apis"];
 
-    let paths = categories.map((category) => {
-        return {
-            params:{
-                category
-            }
-        }
-    });
+    let paths = categories.map((category) =>  `/categories/${category}`); // nice way
 
     return {
         paths,
-        fallback:true
+        fallback:false
     };
 
 };
