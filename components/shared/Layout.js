@@ -10,11 +10,19 @@ function Layout({children}){
 
     useEffect(() => {
 
-        Router.events.on("routeChangeStart",NProgress.start());
-        Router.events.on("routeChangeComplete",NProgress.done());
-        Router.events.on("routeChangeError",NProgress.done());
+        Router.events.on("routeChangeStart",load);
+        Router.events.on("routeChangeComplete",stop);
+        Router.events.on("routeChangeError",stop);
         
     },[]);
+
+    function load(){
+        return NProgress.start();
+    };
+
+    function stop(){
+        return NProgress.done();
+    }
 
     return (
         <section className="layout">

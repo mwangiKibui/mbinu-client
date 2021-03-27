@@ -8,16 +8,21 @@ function BlogCard({data}){
             
           
             <div className="d-none d-sm-block d-md-block d-lg-block blog-card-img">
-                <img
-                src={data.image}
-                alt={data.title}
-                />
+                <Link href={`/post/${data.slug}`}>
+                    <a>
+                        <img
+                        src={data.image}
+                        alt={data.title}
+                        />
+                    </a>
+                </Link>
+                
             </div>
             
 
             <div className="blog-card-info">
 
-                <Link href={`/blog-details`}>
+                <Link href={`/post/${data.slug}`}>
                     <a>
                         {data.title}
                     </a>

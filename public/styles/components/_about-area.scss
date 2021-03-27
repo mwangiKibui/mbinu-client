@@ -43,6 +43,18 @@ About Area CSS
       }
     }
   }
+
+  .about-content-support {
+    width: 100%;
+    margin: 7px 0px;
+    display: flex;
+    justify-content: left;
+
+    a {
+      margin-left: 7px;
+      color: $main-color;
+    }
+  }
 }
 .about-inner-area {
   margin-top: 60px;

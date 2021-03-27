@@ -146,6 +146,12 @@ Blog Details Area CSS
   }
 }
 .blog-details {
+  .article-image {
+    img {
+      width: 100%;
+      height: 400px;
+    }
+  }
   .article-content {
     margin-top: 30px;
 
@@ -406,6 +412,20 @@ blockquote,
     }
   }
 }
+
+.article-support {
+  width: 100%;
+  margin: 20px 0px;
+  display: flex;
+  justify-content: left;
+
+  a {
+    margin-left: 7px;
+    color: $main-color;
+    font-weight: bold;
+  }
+}
+
 .comments-area {
   background-color: #f8f8f8;
   padding: 25px 20px;

@@ -38,10 +38,14 @@ class MainContent extends Component {
                                         </a>
                                     </li>
                                 </ul>
-                                <p>
-                                    To support our work, feel free to 
-                                    <a href="https://www.buymeacoffee.com/itsmkibui"> Buy us coffee </a>
-                                </p>
+
+                                <div className="about-content-support">
+                                <h6>
+                                    To support our work, feel free to                                     
+                                </h6>
+                                <a href="https://www.buymeacoffee.com/itsmkibui"> buy us a coffee </a>.
+                                </div>
+
                             </div>
                         </div>
 
