@@ -71,8 +71,6 @@ Navbar Area CSS
           &:hover,
           &:focus,
           &.active {
-            padding-bottom: 4px;
-            border-bottom: 1px solid $optional-color;
             transition: 0.6s ease-in-out;
           }
           i {

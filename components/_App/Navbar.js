@@ -50,7 +50,7 @@ class Navbar extends Component {
                                 </a>
                             </Link>
 
-                            <button 
+                            <span 
                                 onClick={this.toggleNavbar} 
                                 className={classTwo}
                                 type="button" 
@@ -61,7 +61,7 @@ class Navbar extends Component {
                             >
                                 {/* <span className="navbar-toggler-icon"></span> */}
                                 <Menu />
-                            </button>
+                            </span>
 
                             <div className={classOne} id="navbarSupportedContent">
                                 <ul className="navbar-nav">
