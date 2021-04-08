@@ -14,7 +14,7 @@ app.prepare().then(() => {
     const server = express();
         // Static files
         // https://github.com/zeit/next.js/tree/4.2.3#user-content-static-file-serving-eg-images
-    app.use(express.static(path.join(__dirname,'public')));
+    app.use('/',express.static(path.join(__dirname,'public')));
 
     server.use(bodyParser.json());
 

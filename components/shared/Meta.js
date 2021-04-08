@@ -10,6 +10,7 @@ function Meta({title,description,url,image}){
             <meta  name="og:title" content={title} />
             <meta  name="og:description" content={description} />
             <meta  name="og:image" content={image} />
+            <script data-ad-client="ca-pub-4244808956226420" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         </Head>
     )
 };

@@ -1,14 +1,15 @@
 {
-    "name": "ai-startups",
+    "name": "mbinu",
     "version": "2.6.0",
-    "description": "Opstar - React Next AI Startups Template",
+    "description": "Simplifying approaches for software developers",
     "main": "index.js",
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
-        "start": "next start"
+        "build": "next build && next export",
+        "start": "next start",
+        "publish":"rsync -ar ./out/* mwangi@104.236.58.61:/var/www/mbinu.co.ke/html"
     },
-    "author": "EnvyTheme.com",
+    "author": "mwangiKibui",
     "license": "ISC",
     "dependencies": {
         "@babel/runtime-corejs2": "^7.12.13",
